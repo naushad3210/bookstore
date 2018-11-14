@@ -61,3 +61,4 @@ Get Media Coverage
 ## NOTE
 1) server port can be changed in the application properties file in resource folder. Presently 9000 is set.
 2) Java 8 should be installed
+3) Embedded database H2 is used. So, no need to configure the db.
