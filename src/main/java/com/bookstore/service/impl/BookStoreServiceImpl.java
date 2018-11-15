@@ -101,7 +101,7 @@ public class BookStoreServiceImpl implements IBookStoreService {
 	private List<MediaCoverageResponseDto> getMediaCoverageFromApi(BookDetails bookDetails,String searchField, String searchValue) {
 		List<MediaCoverageResponseDto> mediaCovResponse = new ArrayList<>();
         
-		ResponseEntity<List<MediaCoverageResponseDto>> response = restTemplate.exchange("https://jsonplaceholder.typicode.com/posts", 
+		ResponseEntity<List<MediaCoverageResponseDto>> response = restTemplate.exchange(env.getProperty("media.coverage.api.uri"), 
         													HttpMethod.GET, null, new ParameterizedTypeReference<List<MediaCoverageResponseDto>>() {});
         
         HttpStatus statusCode = response.getStatusCode();
