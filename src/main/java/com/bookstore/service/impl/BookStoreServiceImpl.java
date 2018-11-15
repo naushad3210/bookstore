@@ -37,6 +37,8 @@ public class BookStoreServiceImpl implements IBookStoreService {
 	BookStoreDAO bookStoreDao;
 	@Autowired
 	RestTemplate restTemplate;
+	@Autowired
+	Environment env;
 	
 	@Override
 	@Transactional
